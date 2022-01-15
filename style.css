@@ -420,9 +420,8 @@ hr{
  flex-direction: column;
 
 }
-.top-collections{
 
-}
+
 .second-section {
   background-size: contain;
 
@@ -531,9 +530,7 @@ hr{
    flex-direction: column;
   
   }
-  .top-collections{
-  
-  }
+
   .second-section {
     background-size: contain;
   
@@ -542,8 +539,6 @@ hr{
   .collections{
     grid-template-columns: repeat(1,1fr);
     
-  
-  
   }
   
   .blog-area{
