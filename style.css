@@ -1,6 +1,7 @@
 /*--------------- 
    common are start 
 ---------------*/
+
 body{
     margin: 0;
     padding: 0;
@@ -44,7 +45,12 @@ body{
     list-style: none;
     font-weight: 600px;
 }
-
+.menu{
+  display: none;
+}
+.cart{
+  display: none;
+}
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -159,13 +165,13 @@ body{
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 30px;
-  justify-content: center;
   align-items: center;
   
 
 }
 .collection{
-  width: 300px;
+ width: 329px;
+ cursor: pointer;
   height: 450px;
   background: #FFFFFF;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
@@ -226,24 +232,43 @@ body{
 
 /* Blog Area */
 .blog-area {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  padding: 30px;
-  justify-content: center;
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+ gap: 30px;
   margin-bottom: 30px;
+  cursor: pointer;
 
   
 }
+.blog-title{
+  text-align: center;
+  color: #3a3a3a;
+  font-weight: 900;
+  margin: 50px 0;
+}
 
+.blog-item {
+  position: relative;
+ 
+}
+.blog-content{
+  position: absolute;
+  top: 0;
+  left: 0;
 
+}
 .blog-img img {
-  width: 50%;
+  width: 100%;
   border-radius: 10px;
+
 }
 
 .blog-item h2 {
-  color: rgba(0, 0, 0, 0.87);
+  color: white;
+  background: rgba(0, 0, 0, 0.230);
+  border-radius: 3px;
   margin-top: 20px;
+  padding: 20px;
   font-size: 16px;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -279,7 +304,6 @@ footer span {
 .row{
   display: flex;
   flex-direction: column;
-  
   align-items: center;
 
 }
@@ -289,6 +313,7 @@ footer ul {
   display: flex;
   align-items: center;
   gap: 9px;
+  padding: 0;
 
 
  
@@ -320,18 +345,33 @@ footer a:hover {
 /* phone device  */
 @media only screen and (max-width: 688px) {
 
-   
-  body{
-    overflow-x: hidden;
-  }
 .container{
   width: 100%;
   max-width: 375px;
   
 }
 
-.navbar{
+.menu{
+ display: flex;
+
+}
+.main-header{
+  padding: 0;
+  display: flex;
+  
+  
+}
+.hidden{
   display: none;
+}
+.cart{
+  display: flex;
+}
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-direction: row-reverse;
 }
 .second-section{
   display: flex;
@@ -371,10 +411,32 @@ footer a:hover {
   display: none
   ;
 }
+hr{
+  display: none;
+}
+
+.blog-area {
+ 
+ flex-direction: column;
+
+}
+.top-collections{
+
+}
+.second-section {
+  background-size: contain;
+
+}
+  
 .collections{
   grid-template-columns: repeat(1,1fr);
+  
 
 
+}
+
+.blog-area{
+  grid-template-columns: repeat(2,1fr);
 }
 
 .all-company{
@@ -387,3 +449,116 @@ footer a:hover {
 
 
 }
+
+
+
+/* tab  */
+
+@media only screen and (max-width: 992px) {
+
+  .container{
+    width: 100%;
+    max-width: 375px;
+    
+  }
+  
+  .menu{
+   display: flex;
+  
+  }
+  .main-header{
+    padding: 0;
+    display: flex;
+    
+    
+  }
+  .hidden{
+    display: none;
+  }
+  .cart{
+    display: flex;
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-direction: row-reverse;
+  }
+  .second-section{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .haf-width{
+    width: 100%;
+  }
+  
+  .second-column{
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  .second-column img{
+    width: 100%;
+    padding: 0;
+  }
+  
+  
+  
+  .second-section{
+    background-image: url(images/Circle\ design.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+   
+  
+   
+  }
+  .title{
+    font-size: 38px;
+  }
+  
+  
+  .all-company{
+    display: none
+    ;
+  }
+  hr{
+    display: none;
+  }
+  
+  .blog-area {
+   
+   flex-direction: column;
+  
+  }
+  .top-collections{
+  
+  }
+  .second-section {
+    background-size: contain;
+  
+  }
+    
+  .collections{
+    grid-template-columns: repeat(1,1fr);
+    
+  
+  
+  }
+  
+  .blog-area{
+    grid-template-columns: repeat(2,1fr);
+  }
+  
+  .all-company{
+    display: none;
+  }
+  
+  
+  
+  
+  
+  
+  }
+  
+  
